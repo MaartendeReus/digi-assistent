@@ -411,6 +411,13 @@ h1 span,
   margin-bottom: 10px;
 }
 
+.section-intro {
+  margin: 10px 0 0;
+  color: var(--muted);
+  max-width: 62ch;
+  line-height: 1.7;
+}
+
 .service-pillars {
   display: grid;
   grid-template-columns: 1fr 1fr;
