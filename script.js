@@ -52,6 +52,29 @@ if (form && feedback) {
   });
 }
 
+const hulpForm = document.getElementById("hulpForm");
+const hulpFeedback = document.getElementById("hulpFormFeedback");
+
+if (hulpForm && hulpFeedback) {
+  hulpForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const data = new FormData(hulpForm);
+    const name = String(data.get("name") || "").trim();
+    const phone = String(data.get("phone") || "").trim();
+    const place = String(data.get("place") || "").trim();
+    const message = String(data.get("message") || "").trim();
+
+    if (!name || !phone || !place || !message) {
+      hulpFeedback.textContent = "Vul alle verplichte velden in, dan nemen wij snel contact op.";
+      return;
+    }
+
+    hulpFeedback.textContent = "Bedankt! Uw aanvraag is ontvangen. Wij nemen zo snel mogelijk contact met u op.";
+    hulpForm.reset();
+  });
+}
+
 const serviceAccordionItems = Array.from(document.querySelectorAll(".service-accordion-item"));
 
 function setAccordionItemState(item, isOpen) {

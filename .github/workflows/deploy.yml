@@ -28,7 +28,7 @@ jobs:
       - name: Prepare site files
         run: |
           mkdir -p _site
-          cp index.html styles.css script.js favicon.svg apple-touch-icon.svg og-image.svg robots.txt sitemap.xml CNAME _site/
+          cp index.html digi-hulp.html styles.css script.js favicon.svg apple-touch-icon.svg og-image.svg robots.txt sitemap.xml CNAME _site/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

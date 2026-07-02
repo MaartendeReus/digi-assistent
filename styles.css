@@ -219,6 +219,27 @@ video {
   color: var(--text);
 }
 
+.nav-link-current {
+  color: var(--primary);
+}
+
+.mobile-menu .nav-link-current {
+  color: var(--primary);
+}
+
+.page-hero {
+  padding: 44px 0 36px;
+}
+
+.page-hero .page-intro {
+  max-width: 52ch;
+}
+
+.pricing-grid-hulp {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 720px;
+}
+
 .hero {
   padding: 72px 0 56px;
 }
@@ -1049,6 +1070,7 @@ h1 span,
   .cta-box,
   .pricing-grid,
   .pricing-grid-business,
+  .pricing-grid-hulp,
   .cards-3 {
     grid-template-columns: 1fr;
   }
