@@ -411,6 +411,18 @@ h1 span,
   margin-bottom: 10px;
 }
 
+.section-intro {
+  margin: 10px 0 0;
+  color: var(--muted);
+  max-width: 62ch;
+  line-height: 1.7;
+}
+
+.card-featured {
+  border-color: rgba(46, 242, 183, 0.35);
+  background: linear-gradient(160deg, rgba(46, 242, 183, 0.1), rgba(106, 168, 255, 0.06));
+}
+
 .card p {
   margin: 0;
   color: var(--muted);
