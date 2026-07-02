@@ -397,72 +397,36 @@ h1 span,
 
 .card {
   border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 20px;
+  border-radius: 12px;
+  padding: 18px 20px;
   background: var(--surface);
-  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(106, 168, 255, 0.35);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
-}
-
-.card-head {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 10px;
-}
-
-.card-head h3,
-.card-head h4 {
-  margin: 0;
-  line-height: 1.3;
-}
-
-.card-icon {
-  flex-shrink: 0;
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 11px;
-  border: 1px solid rgba(106, 168, 255, 0.25);
-  background: linear-gradient(160deg, rgba(106, 168, 255, 0.16), rgba(255, 255, 255, 0.04));
-  font-size: 1.1rem;
-  line-height: 1;
-}
-
-.card-icon--featured {
-  border-color: rgba(46, 242, 183, 0.35);
-  background: linear-gradient(160deg, rgba(46, 242, 183, 0.18), rgba(106, 168, 255, 0.08));
-}
-
-.card-icon--compact {
-  width: 34px;
-  height: 34px;
-  border-radius: 9px;
-  font-size: 0.95rem;
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .card h3 {
-  margin-bottom: 0;
-  font-size: 1.05rem;
+  margin: 0 0 8px;
+  font-size: 1.02rem;
+  line-height: 1.3;
+}
+
+.card h4 {
+  margin: 0 0 6px;
+  font-size: 0.96rem;
+  line-height: 1.3;
 }
 
 .card-compact {
-  padding: 16px;
-}
-
-.card-compact .card-head h4 {
-  font-size: 0.98rem;
+  padding: 14px 16px;
 }
 
 .card-compact p {
-  font-size: 0.92rem;
-  line-height: 1.55;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .section-intro {
@@ -490,13 +454,11 @@ h1 span,
 }
 
 .service-accordion-item--business.is-open {
-  border-color: rgba(46, 242, 183, 0.35);
-  box-shadow: 0 0 0 1px rgba(46, 242, 183, 0.08), 0 16px 36px rgba(46, 242, 183, 0.08);
+  border-color: rgba(46, 242, 183, 0.28);
 }
 
 .service-accordion-item--hulp.is-open {
-  border-color: rgba(106, 168, 255, 0.38);
-  box-shadow: 0 0 0 1px rgba(106, 168, 255, 0.08), 0 16px 36px rgba(106, 168, 255, 0.08);
+  border-color: rgba(106, 168, 255, 0.3);
 }
 
 .service-accordion-trigger {
@@ -515,40 +477,11 @@ h1 span,
   min-height: 44px;
 }
 
-.service-accordion-leading {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  min-width: 0;
-}
-
-.service-accordion-badge-icon {
-  flex-shrink: 0;
-  display: grid;
-  place-items: center;
-  width: 46px;
-  height: 46px;
-  border-radius: 13px;
-  font-size: 1.25rem;
-  line-height: 1;
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.service-accordion-item--business .service-accordion-badge-icon {
-  border-color: rgba(46, 242, 183, 0.3);
-  background: linear-gradient(160deg, rgba(46, 242, 183, 0.14), rgba(255, 255, 255, 0.04));
-}
-
-.service-accordion-item--hulp .service-accordion-badge-icon {
-  border-color: rgba(106, 168, 255, 0.3);
-  background: linear-gradient(160deg, rgba(106, 168, 255, 0.14), rgba(255, 255, 255, 0.04));
-}
-
 .service-accordion-text {
   display: grid;
   gap: 5px;
   min-width: 0;
+  flex: 1;
 }
 
 .service-accordion-title-row {
@@ -656,24 +589,14 @@ h1 span,
 }
 
 .service-group-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
   margin: 0 0 12px;
-  font-size: 1rem;
-  color: var(--text);
-}
-
-.service-group-icon {
-  display: grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 8px;
-  border: 1px solid rgba(106, 168, 255, 0.25);
-  background: rgba(106, 168, 255, 0.1);
-  font-size: 0.95rem;
-  line-height: 1;
+  padding-left: 10px;
+  border-left: 2px solid var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 .cards-compact {
@@ -747,13 +670,13 @@ h1 span,
 }
 
 .card-featured {
-  border-color: rgba(46, 242, 183, 0.35);
-  background: linear-gradient(160deg, rgba(46, 242, 183, 0.1), rgba(106, 168, 255, 0.06));
+  border-color: rgba(46, 242, 183, 0.28);
+  background: rgba(46, 242, 183, 0.06);
 }
 
 .card-featured:hover {
-  border-color: rgba(46, 242, 183, 0.5);
-  box-shadow: 0 12px 28px rgba(46, 242, 183, 0.12);
+  border-color: rgba(46, 242, 183, 0.4);
+  background: rgba(46, 242, 183, 0.09);
 }
 
 .card p {
@@ -1221,23 +1144,12 @@ h1 span,
     align-items: flex-start;
   }
 
-  .service-accordion-leading {
-    gap: 10px;
-  }
-
-  .service-accordion-badge-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 11px;
-    font-size: 1.05rem;
-  }
-
   .service-accordion-inner {
     padding-inline: 12px;
   }
 
   .service-group-title {
-    font-size: 0.96rem;
+    font-size: 0.74rem;
   }
 
   .support-tabs {
