@@ -1,17 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="Digi-Assistent">
-  <defs>
-    <linearGradient id="bg" x1="24" y1="18" x2="156" y2="162" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#162040"/>
-      <stop offset="100%" stop-color="#0a1022"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="96" y1="84" x2="146" y2="118" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#2ef2b7"/>
-      <stop offset="100%" stop-color="#17c999"/>
-    </linearGradient>
-  </defs>
-  <rect width="180" height="180" rx="40" fill="url(#bg)"/>
-  <rect x="3" y="3" width="174" height="174" rx="38" fill="none" stroke="rgba(46,242,183,0.22)" stroke-width="4"/>
-  <path fill="#f8faff" d="M48 45h38c26 0 41 15.2 41 45s-15 45-41 45H48V45zm20 20v74h17.5c15.8 0 24.8-9.6 24.8-37s-9-37-24.8-37H68z"/>
-  <rect x="112" y="84" width="31" height="12" rx="6" fill="#f8faff"/>
-  <path fill="url(#accent)" d="M124 62l34 28-34 28V62z"/>
+  <rect width="180" height="180" rx="40" fill="#0a1022"/>
+  <text x="90" y="114" text-anchor="middle" font-family="Manrope, system-ui, -apple-system, sans-serif" font-size="84" font-weight="800" letter-spacing="-0.06em">
+    <tspan fill="#f8faff">D</tspan><tspan fill="#2ef2b7">A</tspan>
+  </text>
 </svg>
