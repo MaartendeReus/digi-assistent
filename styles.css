@@ -441,20 +441,6 @@ h1 span,
   transform: translateY(-1px);
 }
 
-.service-pillar-alt {
-  background: rgba(255, 255, 255, 0.02);
-}
-
-.service-pillar-label {
-  display: inline-block;
-  margin-bottom: 8px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
 .service-pillar h3 {
   margin: 0 0 8px;
   font-size: 1.2rem;
@@ -488,11 +474,6 @@ h1 span,
 
 .region-wrap-inline .eyebrow {
   margin-bottom: 10px;
-}
-
-.intro strong {
-  color: var(--primary);
-  font-weight: 700;
 }
 
 .card-featured {
