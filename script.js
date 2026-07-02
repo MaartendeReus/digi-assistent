@@ -1,0 +1,51 @@
+const form = document.getElementById("leadForm");
+const feedback = document.getElementById("formFeedback");
+const yearEl = document.getElementById("year");
+const supportTabs = Array.from(document.querySelectorAll("[data-support-tab]"));
+const supportPanels = Array.from(document.querySelectorAll(".support-panel"));
+
+if (yearEl) {
+  yearEl.textContent = String(new Date().getFullYear());
+}
+
+if (form && feedback) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const data = new FormData(form);
+    const name = String(data.get("name") || "").trim();
+    const email = String(data.get("email") || "").trim();
+    const message = String(data.get("message") || "").trim();
+
+    if (!name || !email || !message) {
+      feedback.textContent = "Vul alle velden in, dan nemen we snel contact op.";
+      return;
+    }
+
+    feedback.textContent = "Top! Je aanvraag is klaar om te versturen. Koppel dit formulier aan je mailtool.";
+    form.reset();
+  });
+}
+
+if (supportTabs.length && supportPanels.length) {
+  supportTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const targetId = tab.getAttribute("data-support-tab");
+      if (!targetId) return;
+
+      supportTabs.forEach((item) => {
+        item.classList.remove("is-active");
+        item.setAttribute("aria-selected", "false");
+      });
+
+      supportPanels.forEach((panel) => {
+        const isTarget = panel.id === targetId;
+        panel.classList.toggle("is-active", isTarget);
+        panel.hidden = !isTarget;
+      });
+
+      tab.classList.add("is-active");
+      tab.setAttribute("aria-selected", "true");
+    });
+  });
+}
