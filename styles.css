@@ -178,10 +178,9 @@ video {
 }
 
 .logo-sep {
-  margin: 0 1px;
-  color: #2ef2b7;
-  font-weight: 900;
-  font-size: 1.15em;
+  margin: 0;
+  color: #f8faff;
+  font-weight: 800;
   line-height: 1;
 }
 
