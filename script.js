@@ -52,6 +52,33 @@ if (form && feedback) {
   });
 }
 
+const serviceAccordionItems = Array.from(document.querySelectorAll(".service-accordion-item"));
+
+function setAccordionItemState(item, isOpen) {
+  const trigger = item.querySelector(".service-accordion-trigger");
+  const panel = item.querySelector(".service-accordion-panel");
+  if (!trigger || !panel) return;
+
+  item.classList.toggle("is-open", isOpen);
+  trigger.setAttribute("aria-expanded", String(isOpen));
+  panel.hidden = !isOpen;
+}
+
+if (serviceAccordionItems.length) {
+  serviceAccordionItems.forEach((item) => {
+    const trigger = item.querySelector(".service-accordion-trigger");
+    if (!trigger) return;
+
+    trigger.addEventListener("click", () => {
+      const willOpen = !item.classList.contains("is-open");
+
+      serviceAccordionItems.forEach((other) => {
+        setAccordionItemState(other, other === item && willOpen);
+      });
+    });
+  });
+}
+
 if (supportTabs.length && supportPanels.length) {
   supportTabs.forEach((tab) => {
     tab.addEventListener("click", () => {
