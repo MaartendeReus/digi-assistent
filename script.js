@@ -65,14 +65,6 @@ function setAccordionItemState(item, isOpen) {
 }
 
 if (serviceAccordionItems.length) {
-  const desktopAccordion = window.matchMedia("(min-width: 961px)");
-
-  function syncDefaultAccordion() {
-    if (desktopAccordion.matches && !serviceAccordionItems.some((item) => item.classList.contains("is-open"))) {
-      setAccordionItemState(serviceAccordionItems[0], true);
-    }
-  }
-
   serviceAccordionItems.forEach((item) => {
     const trigger = item.querySelector(".service-accordion-trigger");
     if (!trigger) return;
@@ -85,9 +77,6 @@ if (serviceAccordionItems.length) {
       });
     });
   });
-
-  syncDefaultAccordion();
-  desktopAccordion.addEventListener("change", syncDefaultAccordion);
 }
 
 if (supportTabs.length && supportPanels.length) {
