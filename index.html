@@ -18,11 +18,18 @@
   <header class="site-header">
     <div class="container nav-wrap">
       <a href="#top" class="logo" aria-label="Digi-Assistent home">
-        <img class="logo-mark" src="favicon.svg" alt="" width="40" height="40" decoding="async">
-        <span class="logo-text">
-          <span class="logo-name">Digi</span>
-          <span class="logo-name logo-name-accent">Assistent</span>
-        </span>
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <defs>
+            <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#2ef2b7"/>
+              <stop offset="100%" stop-color="#6aa8ff"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="36" height="36" rx="11" fill="#10182f" stroke="url(#logo-grad)" stroke-width="2"/>
+          <path d="M12 10h8.6c6.8 0 11.2 3.8 11.2 9.6S27.4 29.2 20.6 29.2H12V10zm6.4 5.4v13.4h2.6c3.8 0 6-2.1 6-6.4s-2.2-6.4-6-6.4h-2.6z" fill="url(#logo-grad)"/>
+          <circle cx="30" cy="30" r="3" fill="#2ef2b7"/>
+        </svg>
+        <span class="logo-wordmark">Digi<span class="logo-hyphen">-</span><span class="logo-accent">Assistent</span></span>
       </a>
       <nav class="top-nav" aria-label="Hoofdnavigatie">
         <a href="#diensten">Diensten</a>
