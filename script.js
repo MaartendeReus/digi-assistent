@@ -43,11 +43,11 @@ if (form && feedback) {
     const message = String(data.get("message") || "").trim();
 
     if (!name || !email || !message) {
-      feedback.textContent = "Vul alle velden in, dan nemen we snel contact op.";
+      feedback.textContent = "Vul alle verplichte velden in, dan nemen wij snel contact op.";
       return;
     }
 
-    feedback.textContent = "Top! Je aanvraag is klaar om te versturen. Koppel dit formulier aan je mailtool.";
+    feedback.textContent = "Bedankt! Uw bericht is ontvangen. Wij nemen zo snel mogelijk contact met u op.";
     form.reset();
   });
 }
