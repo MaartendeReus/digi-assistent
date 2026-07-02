@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Digi Assistent">
+  <defs>
+    <linearGradient id="mark-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2ef2b7"/>
+      <stop offset="55%" stop-color="#45dfc8"/>
+      <stop offset="100%" stop-color="#6aa8ff"/>
+    </linearGradient>
+    <linearGradient id="mark-bg" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2ef2b7" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#6aa8ff" stop-opacity="0.1"/>
+    </linearGradient>
+    <filter id="mark-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#mark-glow)">
+    <rect x="3" y="3" width="42" height="42" rx="13" fill="url(#mark-bg)" stroke="url(#mark-grad)" stroke-width="2"/>
+    <path d="M15 13h9.8c6.2 0 10.2 3.6 10.2 9.1s-4 9.3-10.4 9.3H15V13zm7.2 6.2v12.4h2.8c3.5 0 5.5-1.9 5.5-5.8 0-3.8-2-5.8-5.5-5.8h-2.8z" fill="url(#mark-grad)"/>
+    <circle cx="36.5" cy="11.5" r="3.4" fill="#2ef2b7"/>
+    <path d="M36.5 15.2v6.2" stroke="#6aa8ff" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="36.5" cy="24" r="2" fill="#6aa8ff"/>
+    <path d="M33.5 11.5h6" stroke="#0a1022" stroke-width="1.2" stroke-linecap="round" opacity="0.35"/>
+  </g>
+</svg>
