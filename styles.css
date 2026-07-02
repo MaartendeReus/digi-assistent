@@ -159,7 +159,7 @@ video {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+  gap: 10px;
   color: var(--text);
   font-weight: 800;
   text-decoration: none;
@@ -168,36 +168,36 @@ video {
 
 .logo-mark {
   flex-shrink: 0;
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   display: block;
 }
 
 .logo-wordmark {
   display: inline-flex;
-  align-items: center;
-  font-size: 1.02rem;
+  align-items: baseline;
+  gap: 0;
+  font-size: 1.04rem;
   font-weight: 800;
   line-height: 1;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.05em;
   white-space: nowrap;
 }
 
 .logo-brand {
-  color: #f4f7ff;
+  color: #f7f9ff;
 }
 
 .logo-sep {
-  margin: 0 1px;
-  color: rgba(244, 247, 255, 0.45);
-  font-weight: 700;
+  margin: 0 3px;
+  color: #2ef2b7;
+  font-weight: 900;
+  font-size: 1.1em;
+  line-height: 1;
 }
 
 .logo-brand-accent {
-  background: linear-gradient(90deg, #2ef2b7 0%, #5ec4ff 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #2ef2b7;
 }
 
 .top-nav {
