@@ -3,6 +3,31 @@ const feedback = document.getElementById("formFeedback");
 const yearEl = document.getElementById("year");
 const supportTabs = Array.from(document.querySelectorAll("[data-support-tab]"));
 const supportPanels = Array.from(document.querySelectorAll(".support-panel"));
+const menuToggle = document.querySelector(".menu-toggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+function closeMobileMenu() {
+  if (!menuToggle || !mobileMenu) return;
+  menuToggle.classList.remove("is-open");
+  menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.setAttribute("aria-label", "Menu openen");
+  mobileMenu.classList.remove("is-open");
+  mobileMenu.hidden = true;
+}
+
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.classList.toggle("is-open");
+    mobileMenu.classList.toggle("is-open", isOpen);
+    mobileMenu.hidden = !isOpen;
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Menu sluiten" : "Menu openen");
+  });
+
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMobileMenu);
+  });
+}
 
 if (yearEl) {
   yearEl.textContent = String(new Date().getFullYear());
