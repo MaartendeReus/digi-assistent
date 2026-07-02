@@ -1054,9 +1054,14 @@ h1 span,
   }
 
   .top-nav,
-  .header-cta,
-  .header-whatsapp {
+  .header-cta {
     display: none;
+  }
+
+  .header-whatsapp {
+    display: inline-flex;
+    padding: 10px 12px;
+    font-size: 0.86rem;
   }
 
   .menu-toggle {
