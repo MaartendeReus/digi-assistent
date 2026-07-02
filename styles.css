@@ -411,11 +411,81 @@ h1 span,
   margin-bottom: 10px;
 }
 
-.section-intro {
-  margin: 10px 0 0;
+.service-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.service-pillar {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+
+.service-pillar:hover {
+  border-color: rgba(106, 168, 255, 0.45);
+  transform: translateY(-1px);
+}
+
+.service-pillar-alt {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.service-pillar-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.service-pillar h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.service-pillar p {
+  margin: 0;
   color: var(--muted);
-  max-width: 62ch;
-  line-height: 1.7;
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.service-block {
+  margin-top: 10px;
+  padding-top: 34px;
+  border-top: 1px solid var(--border);
+}
+
+.service-block-alt {
+  margin-top: 42px;
+}
+
+.service-block-head {
+  max-width: 72ch;
+  margin-bottom: 22px;
+}
+
+.region-wrap-inline {
+  margin-top: 24px;
+}
+
+.region-wrap-inline .eyebrow {
+  margin-bottom: 10px;
+}
+
+.intro strong {
+  color: var(--primary);
+  font-weight: 700;
 }
 
 .card-featured {
@@ -887,7 +957,7 @@ h1 span,
     font-size: 0.98rem;
   }
 
-  .cards {
+  .service-pillars {
     grid-template-columns: 1fr;
   }
 
