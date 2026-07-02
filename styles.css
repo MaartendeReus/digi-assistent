@@ -96,11 +96,24 @@ video {
   width: 44px;
   height: 44px;
   padding: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(46, 242, 183, 0.45);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.14);
+  background: linear-gradient(160deg, rgba(46, 242, 183, 0.18), rgba(46, 242, 183, 0.06));
   cursor: pointer;
   touch-action: manipulation;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+  border-color: rgba(46, 242, 183, 0.65);
+  background: linear-gradient(160deg, rgba(46, 242, 183, 0.24), rgba(46, 242, 183, 0.1));
+  box-shadow: 0 0 0 1px rgba(46, 242, 183, 0.12);
+}
+
+.menu-toggle.is-open {
+  border-color: rgba(46, 242, 183, 0.7);
+  background: linear-gradient(160deg, rgba(46, 242, 183, 0.28), rgba(46, 242, 183, 0.12));
 }
 
 .menu-toggle span {
@@ -108,7 +121,7 @@ video {
   height: 2px;
   margin: 5px 0;
   border-radius: 2px;
-  background: #f8faff;
+  background: var(--primary);
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
