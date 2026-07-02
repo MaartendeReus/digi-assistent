@@ -495,51 +495,6 @@ h1 span,
   line-height: 1.45;
 }
 
-.service-accordion-icon {
-  flex-shrink: 0;
-  width: 30px;
-  height: 30px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  position: relative;
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.service-accordion-item--business.is-open .service-accordion-icon {
-  border-color: rgba(46, 242, 183, 0.3);
-}
-
-.service-accordion-item--hulp.is-open .service-accordion-icon {
-  border-color: rgba(106, 168, 255, 0.3);
-}
-
-.service-accordion-icon::before,
-.service-accordion-icon::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 12px;
-  height: 2px;
-  background: var(--primary);
-  border-radius: 2px;
-  transform: translate(-50%, -50%);
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.service-accordion-item--hulp .service-accordion-icon::before,
-.service-accordion-item--hulp .service-accordion-icon::after {
-  background: var(--accent);
-}
-
-.service-accordion-icon::after {
-  transform: translate(-50%, -50%) rotate(90deg);
-}
-
-.service-accordion-item.is-open .service-accordion-icon::after {
-  opacity: 0;
-}
-
 .service-accordion-panel {
   border-top: 1px solid transparent;
 }
