@@ -159,40 +159,29 @@ video {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  color: var(--text);
-  font-weight: 800;
   text-decoration: none;
   min-width: 0;
-}
-
-.logo-mark {
-  flex-shrink: 0;
-  width: 34px;
-  height: 34px;
-  display: block;
 }
 
 .logo-wordmark {
   display: inline-flex;
   align-items: baseline;
-  gap: 0;
-  font-size: 1.04rem;
+  font-size: clamp(1.35rem, 4.2vw, 1.75rem);
   font-weight: 800;
   line-height: 1;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.06em;
   white-space: nowrap;
 }
 
 .logo-brand {
-  color: #f7f9ff;
+  color: #f8faff;
 }
 
 .logo-sep {
-  margin: 0 3px;
+  margin: 0 1px;
   color: #2ef2b7;
   font-weight: 900;
-  font-size: 1.1em;
+  font-size: 1.15em;
   line-height: 1;
 }
 
@@ -991,18 +980,9 @@ h1 span,
     padding: 10px 0;
   }
 
-  .logo {
-    gap: 8px;
-  }
-
-  .logo-mark {
-    width: 32px;
-    height: 32px;
-  }
-
   .logo-wordmark {
-    font-size: 0.94rem;
-    letter-spacing: -0.04em;
+    font-size: 1.28rem;
+    letter-spacing: -0.05em;
   }
 
   .hero {
@@ -1221,7 +1201,7 @@ h1 span,
   }
 
   .logo-wordmark {
-    font-size: 0.9rem;
+    font-size: 1.18rem;
   }
 
   .btn-small {
